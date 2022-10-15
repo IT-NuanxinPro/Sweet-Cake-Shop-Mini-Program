@@ -1,0 +1,86 @@
+<view class="user_info_wrap">
+    <view wx:if="{{hasUserInfo}}" class="user_img_wrap">
+        <image class="user_bg" src="{{userInfo.avatarUrl}}" ></image>
+        <view class="user_info">
+            <image class="user_icon" src="{{userInfo.avatarUrl}}" mode="aspectFit"></image>
+            <view class="user_name">{{userInfo.nickName}}</view>
+        </view>
+    </view>
+    <view wx:else class="user_btn">
+        <button  type="default" plain bindtap="handleGetUserInfo" size="mini">登录</button>
+    </view>
+</view>
+<view class="user_content">
+    <view class="user_main">
+        <!-- 历史足迹 -->
+        <view class="history_wrap">
+            <navigator url="/pages/collect/Collect">
+                <view class="his_num">{{collectNum}}</view>
+                <view class="his_name">收藏</view>
+            </navigator>
+            <view class="his_cart" bindtap="goToCate" data-url = "/pages/cart/cart">
+                <view class="his_num">{{addCardNum}}</view>
+                <view class="his_name">购物车</view>
+            </view>
+            <navigator>
+                <view class="his_num">0</view>
+                <view class="his_name">我的足迹</view>
+            </navigator>
+            <navigator url="/pages/coupon/coupon">
+                <view class="his_num" >{{couponNum}}</view>
+                <view class="his_name">红包卡券</view>
+            </navigator>
+        </view>
+        <!-- 我的订单 -->
+        <view class="order_wrap">
+            <view class="order_title">
+                我的订单
+            </view>
+            <view class="order_content">
+                <navigator url="../order/order?type=1">
+                    <view class="iconfont icon-quanbudingdan01"></view>
+                    <view class="order_name" bindtap="handleGetGoodlist">全部订单</view>
+                </navigator>
+                <navigator url="../order/order?type=2">
+                    <view class="iconfont icon-daifukuan01"></view>
+                    <view class="order_name">待付款</view>
+                </navigator>
+                <navigator url="../order/order?type=3">
+                    <view class="iconfont icon-daishiyong"></view>
+                    <view class="order_name">待使用</view>
+                </navigator>
+                <navigator url="../order/order?type=4">
+                    <view class="iconfont icon-daipingjia01"></view>
+                    <view class="order_name">待评价</view>
+                </navigator>
+                <navigator url="../order/order?type=5">
+                    <view class="iconfont icon-tuikuanshouhou"></view>
+                    <view class="order_name">退款/售后</view>
+                </navigator>
+
+            </view>
+        </view>
+        <!-- 收获地址管理 -->
+        <navigator url="/pages/addresslist/addresslist">
+            <view class="address_warp">
+                <text> 我的地址管理</text>
+                <text> > </text>
+            </view>
+        </navigator>
+
+        <!-- 应用信息相关 -->
+        <view class="app_info_wrap">
+            <view class="app_info_item app_info_contact">
+                <text>联系客服</text>
+                <text style="color: #ccc;font-size: 32rpx;">123-456-7890</text>
+            </view>
+            <navigator class="app_info_item" url="/pages/feedback/feedback">意见反馈</navigator>
+            <view class="app_info_item" bindtap="loginout">退出登录</view>
+            <view class="app_info_item">关于我们</view>
+        </view>
+        <!-- 推荐 -->
+        <view class="recommend_wrap">
+            把小店推荐给其他人
+        </view>
+    </view>
+</view>

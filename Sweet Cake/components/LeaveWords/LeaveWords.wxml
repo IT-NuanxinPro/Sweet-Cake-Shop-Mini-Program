@@ -1,0 +1,25 @@
+<view class="comment-list">
+  <view wx:for="{{comment}}" wx:key="*this">
+    <view class="comment-item">
+      <!-- 左侧 -->
+      <view class="left-comment">
+        <image
+          class="head-img"
+          src="{{assertUrl+'classifyImg/0.jpg'}}"
+          mode="aspectFit"
+        >
+        </image>
+        <view class="comment-word">
+          <text class="anonymous">匿名用户:</text>
+          <view class="comments">
+            {{item}}
+          </view>
+        </view>
+      </view>
+      <view class="comment-date">{{date}}</view>
+    </view>
+
+  </view>
+
+</view>
+

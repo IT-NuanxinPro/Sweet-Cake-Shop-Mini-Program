@@ -1,0 +1,105 @@
+<block wx:if="{{oldaddress.length>0?true:false}}">
+  <view class="address-list">
+    <view
+      class="address-item"
+      wx:for="{{oldaddress}}"
+      wx:key="index"
+      data-address="{{item}}"
+      catchtap="useAddress"
+    >
+      <view class="item-top">{{item.name}} {{item.mobile}}</view>
+      <view class="item-content">{{item.city}} {{item.street}} </view>
+      <view class="item-bottom">
+        <view
+          class="left"
+          bindtap="checkDefault"
+          data-index="{{index}}"
+        >
+          <icon type="{{item.isDefault ? 'success' : 'circle'}}" size="15"></icon>
+          设为默认地址
+        </view>
+        <view class="right">
+          <view
+            class="txt"
+            catchtap="checkDelete"
+            data-index="{{index}}"
+          >删除
+          </view>
+          <view
+            class="txt"
+            catchtap="chickEdit"
+            data-index="{{index}}"
+          >编辑
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 新增地址 -->
+  <view class="add-address" catchtap="addAddress">
+    <view class="txt">新增地址</view>
+  </view>
+</block>
+<!-- 数据库没地址信息时 -->
+<block wx:else>
+  <view class="weui-cells content">
+    <view class="weui-cell">
+      <view class="weui-label label-txt">姓名</view>
+      <view class="weui-cell-bd">
+        <input
+          class="weui-input input-txt"
+          placeholder-class="input-placeholder"
+          placeholder="收货人姓名"
+          value="{{address.name}}"
+          bindinput="inputName"
+        />
+      </view>
+    </view>
+    <view class="weui-cell">
+      <view class="weui-label label-txt">手机号</view>
+      <view class="weui-cell-bd">
+        <input
+          class="weui-input input-txt"
+          placeholder-class="input-placeholder"
+          placeholder="收货人手机号"
+          value="{{address.mobile}}"
+          bindinput="inputMobile"
+        />
+      </view>
+    </view>
+    <view class="weui-cell">
+      <view class="weui-label label-txt">所在地址</view>
+      <view class="weui-cell-bd input-txt">
+        <picker mode="region" bindchange="bindRegionChange">
+          <view class="{{address.city.length >0 ? '' : 'input-placeholder'}}">
+            {{address.city.length > 0 ? address.city : '选择收货地址'}}</view>
+        </picker>
+      </view>
+    </view>
+    <view class="weui-cell">
+      <view class="weui-label label-txt">详细地址</view>
+      <view class="weui-cell-bd">
+        <input
+          class="weui-input input-txt"
+          placeholder-class="input-placeholder"
+          placeholder="请输入详细地址"
+          value="{{address.street}}"
+          bindinput="inputStreet"
+        />
+      </view>
+    </view>
+  </view>
+  <view
+    class="check-default"
+    bindtap="checkDefault"
+    data-index="{{index}}"
+  >
+    <icon type="{{address.isDefault ? 'success':'circle'}}" size="15"></icon>
+    设为默认地址
+  </view>
+
+  <view class="add-address" bindtap="chickAdd">
+    <view class="txt">新增地址</view>
+  </view>
+</block>
+

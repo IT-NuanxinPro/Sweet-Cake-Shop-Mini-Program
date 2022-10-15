@@ -1,0 +1,40 @@
+page {
+  background-color: #fcfbfa;
+  color: #666;
+}
+
+.tabs {
+  display: flex;
+  background-color: #f8f7f6;
+}
+
+.tabs-title-item {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 8rpx;
+  border-bottom: 1rpx solid #F3F3F3;
+  font-size: 28rpx;
+  height: 64rpx;
+}
+
+.tabs-title-item.isActive {
+  border-bottom: 4rpx solid #f6bec8;
+}
+
+.comment-container{
+  position: relative;
+}
+.comment{
+  position: absolute;
+  display: inline-block;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  text-align: center;
+  left: 48rpx;
+  font-size: 24rpx;
+  color: #FF4C00;
+}

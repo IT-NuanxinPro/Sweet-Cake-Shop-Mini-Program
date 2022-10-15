@@ -1,0 +1,591 @@
+[{
+  "_id": {
+    "$oid": "62beb655ba67cddcc0a451f6"
+  },
+  "id": "001",
+  "text": "折扣秒杀",
+  "badge": 0,
+  "children": [
+    {
+      "id": 1,
+      "text": "马卡龙",
+      "imgUrl": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-d0fd619d-b424-42b7-9eb4-12d4070b76d1/2a14759a-0549-4581-b682-306517b347dd.jpg",
+      "price": 23.8,
+      "oldPrice": 88,
+      "content": "香滑的乳酪,蕴含着淡淡的酒香和清新柠檬的奶香味,微苦后微微回甘",
+      "sale": true,
+      "start": 4.5,
+      "tag_title": "秒杀",
+      "num": 1,
+      "isSelect": false,
+      "addCollect": false,
+      "goods_sales": "10000",
+      "swiperList": [
+        "detailsImg/马卡龙.jpg",
+        "detailsImg/马卡龙1.jpg",
+        "detailsImg/马卡龙2.jpg",
+        "detailsImg/马卡龙3.jpg",
+        "detailsImg/马卡龙4.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "text": "黑糖松饼",
+      "imgUrl": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-d0fd619d-b424-42b7-9eb4-12d4070b76d1/521b9191-9250-476e-8935-6648e77b0f7d.jpg",
+      "content": "在雍容瑰丽的巴黎歌剧院舞台上,掀起的一幕幕剧情如蛋糕一层层精致的铺排",
+      "price": 118,
+      "oldPrice": 169,
+      "sale": true,
+      "start": 4,
+      "tag_title": "秒杀",
+      "num": 1,
+      "addCollect": false,
+      "isSelect": false,
+      "goods_sales": "20000",
+      "swiperList": [
+        "detailsImg/黑糖松饼.jpg",
+        "detailsImg/黑糖松饼1.jpg",
+        "detailsImg/黑糖松饼2.jpg",
+        "detailsImg/黑糖松饼3.jpg",
+        "detailsImg/黑糖松饼4.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "text": "蜂蜜千层",
+      "imgUrl": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-d0fd619d-b424-42b7-9eb4-12d4070b76d1/ad46ca81-338e-47e1-bf13-bde666521efc.jpg",
+      "content": "从造型到颜色,再到口味,层层给您新的感受,处处透露出浓浓的优雅、大方",
+      "price": 55,
+      "oldPrice": 69,
+      "sale": true,
+      "start": 5,
+      "tag_title": "秒杀",
+      "num": 1,
+      "addCollect": false,
+      "isSelect": false,
+      "goods_sales": "15000",
+      "swiperList": [
+        "detailsImg/蜂蜜千层.jpg",
+        "detailsImg/蜂蜜千层1.jpg",
+        "detailsImg/蜂蜜千层2.jpg",
+        "detailsImg/蜂蜜千层3.jpg"
+      ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "62beb655ba67cddcc0a451f7"
+  },
+  "id": "002",
+  "text": "热卖推荐",
+  "badge": 0,
+  "children": [
+    {
+      "id": 4,
+      "text": "曲奇夹心",
+      "imgUrl": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-d0fd619d-b424-42b7-9eb4-12d4070b76d1/4a3b9c2a-6298-451e-b56a-8426e70451c2.jpg",
+      "content": "一颗神奇的开心果掉入土耳其这个神秘的国度,魔幻般的缘分造就其柔软的梦",
+      "price": 50,
+      "start": 3.5,
+      "tag_title": "热卖",
+      "num": 1,
+      "addCollect": false,
+      "isSelect": false,
+      "goods_sales": "5000",
+      "swiperList": [
+        "detailsImg/曲奇夹心.jpg"
+      ]
+    },
+    {
+      "id": 5,
+      "text": "巧克力球",
+      "imgUrl": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-d0fd619d-b424-42b7-9eb4-12d4070b76d1/04adfb07-2ea0-4f95-a8dc-87d98f59d980.jpg",
+      "content": "南京的秋天是迷人的,慕斯的棉滑,让人享受相思的快乐,其间的核桃坚果浓香散发",
+      "price": 130,
+      "start": 4,
+      "tag_title": "热卖",
+      "num": 1,
+      "addCollect": false,
+      "isSelect": false,
+      "goods_sales": "6000",
+      "swiperList": [
+        "detailsImg/巧克力球.jpg"
+      ]
+    },
+    {
+      "id": 6,
+      "text": "巧克力饼",
+      "imgUrl": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-d0fd619d-b424-42b7-9eb4-12d4070b76d1/cdcd3145-7176-4d13-a350-f4452da600bd.jpg",
+      "content": "在弥漫深红及咖啡色的黑森林里,隐藏著酒香与巧克力的滋味,需要您细心品尝",
+      "price": 120,
+      "start": 4.5,
+      "tag_title": "热卖",
+      "num": 1,
+      "addCollect": false,
+      "isSelect": false,
+      "goods_sales": "7000",
+      "swiperList": [
+        "detailsImg/巧克力饼.jpg"
+      ]
+    },
+    {
+      "id": 7,
+      "text": "咖啡蛋卷蛋糕",
+      "imgUrl": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-d0fd619d-b424-42b7-9eb4-12d4070b76d1/90930bf4-6666-4992-b396-6f85ef17af6e.jpg",
+      "content": "阳光海岸生长的香草豆荚的天然味道和奶油的幽香相互的配合,给您'回忆'的甜带来更多的色彩",
+      "price": 110,
+      "start": 5,
+      "tag_title": "热卖",
+      "num": 1,
+      "addCollect": false,
+      "isSelect": false,
+      "goods_sales": "9000",
+      "swiperList": [
+        "detailsImg/咖啡蛋卷蛋糕.jpg"
+      ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "62beb655ba67cddcc0a451f8"
+  },
+  "id": "003",
+  "text": "特惠产品",
+  "badge": 0,
+  "children": [
+    {
+      "id": 8,
+      "text": "巧克力坚果蛋糕",
+      "imgUrl": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-d0fd619d-b424-42b7-9eb4-12d4070b76d1/f3d7a6eb-8006-4723-adf8-04e4c9ad29d1.jpg",
+      "content": "莓芝士蛋糕,蔓越莓、芝士、白兰地交汇之时,不经意就勾勒出丰厚的酸甜的香浓滋味",
+      "price": 170,
+      "start": 4.5,
+      "tag_title": "特惠",
+      "num": 1,
+      "addCollect": false,
+      "isSelect": false,
+      "goods_sales": "1000",
+      "swiperList": [
+        "detailsImg/巧克力坚果蛋糕.jpg"
+      ]
+    },
+    {
+      "id": 9,
+      "text": "火龙果蛋糕",
+      "imgUrl": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-d0fd619d-b424-42b7-9eb4-12d4070b76d1/207cc78c-b320-4b95-9513-24c795fb16f3.jpg",
+      "content": "足以奏出一切喜、怒、哀、乐、沉实澎湃的黑,明朗轻快的白,随时回味、回味",
+      "price": 130,
+      "start": 3,
+      "tag_title": "特惠",
+      "num": 1,
+      "addCollect": false,
+      "isSelect": false,
+      "goods_sales": "2000",
+      "swiperList": [
+        "detailsImg/火龙果蛋糕.jpg"
+      ]
+    },
+    {
+      "id": 10,
+      "text": "杯子蛋糕",
+      "imgUrl": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-d0fd619d-b424-42b7-9eb4-12d4070b76d1/e56e7e46-9d7d-4228-a152-ab5f6cbc6d0a.jpg",
+      "content": "草莓、红酒梨、黄桃、猕猴桃汇合成的水果底座,百香果的到来更添清清爽爽却毫无单调之感",
+      "price": 60,
+      "start": 4,
+      "tag_title": "特惠",
+      "num": 1,
+      "addCollect": false,
+      "isSelect": false,
+      "goods_sales": "3000",
+      "swiperList": [
+        "detailsImg/杯子蛋糕.jpg"
+      ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "62beb655ba67cddcc0a451f9"
+  },
+  "id": "004",
+  "text": "新品尝鲜",
+  "badge": 0,
+  "children": [
+    {
+      "id": 11,
+      "text": "流心巧克力",
+      "imgUrl": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-d0fd619d-b424-42b7-9eb4-12d4070b76d1/66753705-a8a3-4e82-a19a-8e8f0a83481b.jpg",
+      "content": "当水果爱上了巧克力,奶油爱上了蛋糕,让您一步步陷进爱情的这张网,无法自拔",
+      "price": 188,
+      "start": 4,
+      "tag_title": "新品",
+      "num": 1,
+      "addCollect": false,
+      "isSelect": false,
+      "goods_sales": "100",
+      "swiperList": [
+        "detailsImg/流心巧克力.jpg"
+      ]
+    },
+    {
+      "id": 12,
+      "text": "巧克力蛋糕",
+      "imgUrl": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-d0fd619d-b424-42b7-9eb4-12d4070b76d1/92377fad-9117-4e1b-bd90-0b6ef4f29470.jpg",
+      "content": "如雪般白而细腻的奶油,加入覆盆子的酸甜,给您雪域般的浓情感受,甜而不腻",
+      "price": 155,
+      "start": 4.5,
+      "tag_title": "新品",
+      "num": 1,
+      "addCollect": false,
+      "isSelect": false,
+      "goods_sales": "200",
+      "swiperList": [
+        "detailsImg/巧克力蛋糕.jpg"
+      ]
+    },
+    {
+      "id": 13,
+      "text": "草莓牛奶蛋糕",
+      "imgUrl": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-d0fd619d-b424-42b7-9eb4-12d4070b76d1/a0996182-959f-4b32-a442-8da1b87dad31.jpg",
+      "content": "草莓的香甜,紫薯的糯软,层叠在细腻的芝士里,真心相恋的情人会看到雨后彩虹微笑的表情",
+      "price": 158,
+      "start": 5,
+      "tag_title": "新品",
+      "num": 1,
+      "addCollect": false,
+      "isSelect": false,
+      "goods_sales": "300",
+      "swiperList": [
+        "detailsImg/草莓牛奶蛋糕.jpg"
+      ]
+    },
+    {
+      "id": 14,
+      "text": "坚果蛋糕",
+      "imgUrl": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-d0fd619d-b424-42b7-9eb4-12d4070b76d1/cf89ac5f-6f2a-47d9-951e-863e26a54dbb.jpg",
+      "content": "挑剔的味蕾最懂得出挑的味道,这一季馥郁的圆舞曲蛋糕,酝酿出蛊惑的清香,让人流连忘返!",
+      "price": 118,
+      "start": 4.5,
+      "tag_title": "新品",
+      "num": 1,
+      "addCollect": false,
+      "isSelect": false,
+      "goods_sales": "400",
+      "swiperList": [
+        "detailsImg/坚果蛋糕.jpg"
+      ]
+    },
+    {
+      "id": 15,
+      "text": "蓝莓慕斯",
+      "imgUrl": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-d0fd619d-b424-42b7-9eb4-12d4070b76d1/247544dc-4c93-42e7-af4f-1569bf9b0ba3.jpg",
+      "content": "黑白分明的巧克力慕斯,表层细细的可可粉,等到他慢慢的融化,柔软湿滑的触感",
+      "price": 128,
+      "start": 4.5,
+      "tag_title": "新品",
+      "num": 1,
+      "addCollect": false,
+      "isSelect": false,
+      "goods_sales": "6000",
+      "swiperList": [
+        "detailsImg/蓝莓慕斯.jpg"
+      ]
+    },
+    {
+      "id": 16,
+      "text": "蜂蜜蛋糕",
+      "imgUrl": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-d0fd619d-b424-42b7-9eb4-12d4070b76d1/fbd6be6c-2a5c-496b-97c3-a2c415f45ef2.jpg",
+      "content": "巧克力铲花的装饰,勾勒出了家园的围栏,还添加了具有丰富营养价值的蔓越莓果酱",
+      "price": 166,
+      "start": 5,
+      "tag_title": "新品",
+      "num": 1,
+      "addCollect": false,
+      "isSelect": false,
+      "goods_sales": "600",
+      "swiperList": [
+        "detailsImg/蜂蜜蛋糕.jpg"
+      ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "62beb655ba67cddcc0a451fa"
+  },
+  "id": "005",
+  "text": "经典蛋糕",
+  "badge": 0,
+  "children": [
+    {
+      "id": 11,
+      "text": "流心巧克力",
+      "imgUrl": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-d0fd619d-b424-42b7-9eb4-12d4070b76d1/f2edcf2f-d146-4a78-81af-308ea31545ea.jpg",
+      "content": "铺满了黄色果仁的蛋糕,果仁的口感与香味,伴随奶油的香甜细腻,味道在口腔中深远而绵长",
+      "price": 188,
+      "start": 4.5,
+      "tag_title": "新品",
+      "num": 1,
+      "isSelect": false,
+      "addCollect": false,
+      "goods_sales": "7000",
+      "swiperList": [
+        "detailsImg/流心巧克力.jpg"
+      ]
+    },
+    {
+      "id": 8,
+      "text": "巧克力坚果蛋糕",
+      "imgUrl": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-d0fd619d-b424-42b7-9eb4-12d4070b76d1/00b7f0f7-4b07-4854-8c96-cb310ce2059e.jpg",
+      "content": "搭配纯粹香滑的酸奶奶油,清爽的视觉,清甜的味道,味蕾被深深的陶醉",
+      "price": 170,
+      "start": 4.5,
+      "tag_title": "特惠",
+      "num": 1,
+      "isSelect": false,
+      "addCollect": false,
+      "goods_sales": "3500",
+      "swiperList": [
+        "detailsImg/巧克力坚果蛋糕.jpg"
+      ]
+    },
+    {
+      "id": 12,
+      "text": "巧克力蛋糕",
+      "imgUrl": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-d0fd619d-b424-42b7-9eb4-12d4070b76d1/f7e44ca5-e257-4749-88e3-f01dfa12b649.jpg",
+      "content": "一层淡淡的绯红,散发玫瑰的芳香,轻轻含在口中,清爽而美妙的口感丰富着你的味觉世界",
+      "price": 155,
+      "start": 3.5,
+      "tag_title": "新品",
+      "num": 1,
+      "isSelect": false,
+      "addCollect": false,
+      "goods_sales": "3200",
+      "swiperList": [
+        "detailsImg/巧克力蛋糕.jpg"
+      ]
+    },
+    {
+      "id": 17,
+      "text": "蓝莓牛奶蛋糕",
+      "imgUrl": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-d0fd619d-b424-42b7-9eb4-12d4070b76d1/948d1efa-d8f3-45c9-a148-1275cc98d66f.jpg",
+      "content": "细滑中散发的浓浓水果香气,清新甜美,柔软而温暖,精心选择的每一种水果,味蕾被深深沉醉",
+      "price": 158,
+      "start": 5,
+      "tag_title": "新品",
+      "num": 1,
+      "isSelect": false,
+      "addCollect": false,
+      "goods_sales": "3400",
+      "swiperList": [
+        "detailsImg/草莓牛奶蛋糕.jpg"
+      ]
+    },
+    {
+      "id": 14,
+      "text": "坚果蛋糕",
+      "imgUrl": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-d0fd619d-b424-42b7-9eb4-12d4070b76d1/51280c4c-b37f-4525-ac5a-54dd7880e9db.jpg",
+      "content": "远渡重洋而来的坚果,一定是芝士慕斯的味道,覆盆子果酱与蔓越莓果干浸着淡淡酒香",
+      "price": 118,
+      "start": 4,
+      "tag_title": "新品",
+      "num": 1,
+      "isSelect": false,
+      "addCollect": false,
+      "goods_sales": "4100",
+      "swiperList": [
+        "detailsImg/坚果蛋糕.jpg"
+      ]
+    },
+    {
+      "id": 15,
+      "text": "蓝莓慕斯",
+      "imgUrl": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-d0fd619d-b424-42b7-9eb4-12d4070b76d1/dfef5341-33ef-4212-8377-e6f51eb02b40.jpg",
+      "content": "那层叠的水果和各种坚果,色欲诱人,甜香嫩滑,酸酸甜甜的奶油夹心,让香气和味道都加倍馥郁诱人",
+      "price": 128,
+      "start": 4.5,
+      "tag_title": "新品",
+      "num": 1,
+      "isSelect": false,
+      "addCollect": false,
+      "goods_sales": "4600",
+      "swiperList": [
+        "detailsImg/蓝莓慕斯.jpg"
+      ]
+    },
+    {
+      "id": 9,
+      "text": "火龙果蛋糕",
+      "imgUrl": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-d0fd619d-b424-42b7-9eb4-12d4070b76d1/bae2e518-ac04-483c-ace7-03d0ae5109b9.jpg",
+      "content": "看见一层层一圈圈的水果和奶油,让人一下联想到罗马那个古老的城市,游遍罗马的大街小巷",
+      "price": 130,
+      "start": 3.5,
+      "tag_title": "特惠",
+      "num": 1,
+      "isSelect": false,
+      "addCollect": false,
+      "goods_sales": "5100",
+      "swiperList": [
+        "detailsImg/火龙果蛋糕.jpg"
+      ]
+    },
+    {
+      "id": 16,
+      "text": "蜂蜜蛋糕",
+      "imgUrl": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-d0fd619d-b424-42b7-9eb4-12d4070b76d1/6d3c275c-307a-456e-b045-f4c0ed8b571e.jpg",
+      "content": "花蝶围绕,仿佛舞起了那层叠的花朵,随风飘逸,丝丝垂落的心,一缕缕牵挂着你和我",
+      "price": 166,
+      "start": 4.5,
+      "tag_title": "新品",
+      "num": 1,
+      "isSelect": false,
+      "addCollect": false,
+      "goods_sales": "5300",
+      "swiperList": [
+        "detailsImg/蜂蜜蛋糕.jpg"
+      ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "62beb655ba67cddcc0a451fb"
+  },
+  "id": "006",
+  "text": "甜点饼干",
+  "badge": 0,
+  "children": [
+    {
+      "id": 4,
+      "text": "曲奇夹心",
+      "imgUrl": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-d0fd619d-b424-42b7-9eb4-12d4070b76d1/e678890f-f018-4d1d-91ac-b009c367709b.jpg",
+      "content": "波浪中那点点绿光,盛放的花朵,乘风破浪,耀眼而夺目",
+      "price": 50,
+      "start": 4.5,
+      "tag_title": "热卖",
+      "num": 1,
+      "isSelect": false,
+      "addCollect": false,
+      "goods_sales": "5000",
+      "swiperList": [
+        "detailsImg/曲奇夹心.jpg"
+      ]
+    },
+    {
+      "id": 5,
+      "text": "巧克力球",
+      "imgUrl": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-d0fd619d-b424-42b7-9eb4-12d4070b76d1/fb3afd56-a6cb-4ac4-9d3f-558c3722ae63.jpg",
+      "content": "美丽的浪花中,美人鱼在翻涌,仿佛把她们巧妙的心思都一点点的传递给她们心中的王子",
+      "price": 130,
+      "start": 2,
+      "tag_title": "热卖",
+      "num": 1,
+      "isSelect": false,
+      "addCollect": false,
+      "goods_sales": "6000",
+      "swiperList": [
+        "detailsImg/巧克力球.jpg"
+      ]
+    },
+    {
+      "id": 6,
+      "text": "巧克力饼",
+      "imgUrl": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-d0fd619d-b424-42b7-9eb4-12d4070b76d1/1dde7feb-fb8b-4580-b951-d7ba40824f4d.jpg",
+      "content": "美丽展开的水果像一层层扇叶,又像是蝴蝶在花丛中飞舞,一派仙境气象",
+      "price": 120,
+      "start": 2.5,
+      "tag_title": "热卖",
+      "num": 1,
+      "isSelect": false,
+      "addCollect": false,
+      "goods_sales": "7000",
+      "swiperList": [
+        "detailsImg/巧克力饼.jpg"
+      ]
+    },
+    {
+      "id": 1,
+      "text": "马卡龙",
+      "imgUrl": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-d0fd619d-b424-42b7-9eb4-12d4070b76d1/9b31beb7-e5a6-4188-b5da-f704fb4196a3.jpg",
+      "content": "香滑的乳酪,蕴含着淡淡的酒香和清新柠檬的奶香味,微苦后微微回甘",
+      "price": 23.8,
+      "sale": true,
+      "start": 4.5,
+      "tag_title": "秒杀",
+      "num": 1,
+      "isSelect": false,
+      "addCollect": false,
+      "goods_sales": "10000"
+    },
+    {
+      "id": 2,
+      "text": "黑糖松饼",
+      "imgUrl": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-d0fd619d-b424-42b7-9eb4-12d4070b76d1/639266eb-4bac-41a0-8cbc-113f5012e9a5.jpg",
+      "content": "丝丝相溶的心,代表着火热的爱,我的心里住着一个你,你的心里住着一个我",
+      "price": 118,
+      "sale": true,
+      "start": 3.5,
+      "num": 1,
+      "tag_title": "秒杀",
+      "isSelect": false,
+      "addCollect": false,
+      "goods_sales": "20000",
+      "swiperList": [
+        "detailsImg/黑糖松饼.jpg",
+        "detailsImg/黑糖松饼1.jpg",
+        "detailsImg/黑糖松饼2.jpg",
+        "detailsImg/黑糖松饼3.jpg",
+        "detailsImg/黑糖松饼4.jpg"
+      ]
+    },
+    {
+      "id": 7,
+      "text": "咖啡蛋卷蛋糕",
+      "imgUrl": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-d0fd619d-b424-42b7-9eb4-12d4070b76d1/8262cd9d-011c-4725-9c7a-a9ea08155912.jpg",
+      "content": "一丝甜,彻入心扉",
+      "price": 110,
+      "start": 3.5,
+      "tag_title": "热卖",
+      "num": 1,
+      "isSelect": false,
+      "addCollect": false,
+      "goods_sales": "9000",
+      "swiperList": [
+        "detailsImg/咖啡蛋卷蛋糕.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "text": "蜂蜜千层",
+      "imgUrl": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-d0fd619d-b424-42b7-9eb4-12d4070b76d1/d469b516-37fa-41c5-9b3a-c2c923f7f0d4.jpg",
+      "content": "粉色的波点和波浪沟点出华丽的倩影,让人浮想联翩",
+      "price": 55,
+      "sale": true,
+      "start": 4,
+      "tag_title": "秒杀",
+      "num": 1,
+      "isSelect": false,
+      "addCollect": false,
+      "goods_sales": "15000",
+      "swiperList": [
+        "detailsImg/蜂蜜千层.jpg",
+        "detailsImg/蜂蜜千层1.jpg",
+        "detailsImg/蜂蜜千层2.jpg",
+        "detailsImg/蜂蜜千层3.jpg"
+      ]
+    },
+    {
+      "id": 10,
+      "text": "杯子蛋糕",
+      "imgUrl": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-d0fd619d-b424-42b7-9eb4-12d4070b76d1/32c832aa-b797-4eba-979e-5c0c04c7f73a.jpg",
+      "content": "华贵的白,衬托出高贵典雅,玫瑰洁白而肃静,这将是一场盛宴",
+      "price": 60,
+      "start": 4.5,
+      "tag_title": "特惠",
+      "num": 1,
+      "isSelect": false,
+      "addCollect": false,
+      "goods_sales": "3000",
+      "swiperList": [
+        "detailsImg/杯子蛋糕.jpg"
+      ]
+    }
+  ]
+}]

@@ -1,0 +1,121 @@
+<!-- 轮播图 -->
+<view>
+	<swiper class="swiper"
+			circular="true"
+			indicator-dots="true"
+			autoplay="true"
+			interval ="{{interval}}"
+			duration="{{duration}}"
+	>
+		<swiper-item wx:for="{{imgList}}"  wx:key="index">
+			<image class="swiper-img" src="{{assertUrl + item}}"></image>
+		</swiper-item>
+	</swiper>
+</view>
+
+<!-- 搜索框 -->
+<view class="search">
+	<van-search
+			shape="round"
+			placeholder="请输入想要的商品"
+			disabled
+			bindtap="goto"
+			data-url="/pages/search/search"
+	/>
+</view>
+
+<!-- 导航图标 -->
+<view class="title-label">
+	<view class="imgNavList">
+		<block wx:for="{{imgNavLists}}" wx:key="index">
+			<image
+					class="lable-img"
+					src="{{assertUrl +item.img}}"
+					bindtap="goToCate"
+					data-cate="/pages/cate/cate"
+			/>
+		</block>
+	</view>
+	<view class="img-title">
+		<block wx:for="{{imgNavLists}}" wx:key="index">
+			<text>{{item.title}}</text>
+		</block>
+	</view>
+</view>
+
+<!-- banner -->
+<view class="banner">
+	<view class="banner-list">
+		<block wx:for="{{bannerLists}}" wx:key="index">
+			<image class="banner-img" src="{{assertUrl + item }}" />
+		</block>
+	</view>
+</view>
+
+<!-- coupon -->
+<view style="display: flex;background-color: #fff;">
+	<Coupon id="coupon" bindGet="getCoupon" />
+	<Coupon class="coupon" bindGetOne="getCoupon1"/>
+</view>
+
+<!-- 限时活动 -->
+<view class="limitActivity">
+	<view class="limitActivity_title">
+		<text>限时活动</text>
+	</view>
+	<view class="limitActivity_content">
+		<view class="limitActivity_content_item" wx:for="{{newProductList[0].children}}" wx:key="id"
+			  catchtap="goToDetail" data-cake="{{item}}" >
+			<image class="limitActivity_content_item_img" src="{{item.imgUrl}}"/>
+			<text class="limitActivity_content_item_title">{{item.text}}</text>
+			<text class="limitActivity_content_item_price">￥{{item.price}}</text>
+			<view class="grab">
+				<text class="limitActivity_content_item_oldPrice">￥{{item.oldPrice}}</text>
+				<text class="limitActivity_content_item_grab">抢</text>
+			</view>
+			<van-count-down use-slot time="{{ time }}" bind:change="onChangeTime">
+				<text class="item_time1">{{ timeData.hours }}</text>
+				<text class="item_time2">{{ timeData.minutes }}</text>
+				<text class="item_time3">{{ timeData.seconds }}</text>
+			</van-count-down>
+		</view>
+	</view>
+</view>
+
+<!--新品尝鲜-->
+<view class="newProduct">
+	<view class="newProduct_title">
+		<text>新品尝鲜</text>
+	</view>
+	<view class="newProduct_content">
+		<view class="newProduct_content_item" wx:for="{{newProductList[3].children}}" wx:key="id"
+				   catchtap="goToDetail"
+				   data-cake="{{item}}">
+			<image class="newProduct_content_item_img" src="{{item.imgUrl}}" />
+			<text class="newProduct_content_item_title">{{item.text}}</text>
+			<text class="newProduct_content_item_price">￥{{item.price}}</text>
+		</view>
+	</view>
+</view>
+
+<!-- 底部备案 -->
+<view class="footer">
+	<view class="footer_content">
+
+		<view class="f_title">
+			<van-icon name="like" color="red" />
+			甜心蜜语蛋糕坊
+		</view>
+		<view class="f_con">由暖心工作室提供技术支持</view>
+	</view>
+</view>
+
+<!-- 一键回到顶部 -->
+<view class="toTop" hidden="{{!scrollTop}}">
+	<van-icon name="back-top" color="#201f1e" size="50rpx" bindtap="toTop" />
+</view>
+
+
+    
+
+

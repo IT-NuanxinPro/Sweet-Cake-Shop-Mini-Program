@@ -1,0 +1,44 @@
+/* pages/collect/Collect.wxss */
+page{
+  background-color: rgb(247,247,247)
+}
+.collect_item{
+  border-radius: 10rpx;
+  background-color: #fff;
+  margin: 8rpx 16rpx;
+}
+.item_content{
+  display: flex;
+  justify-content: space-between;
+}
+.item_content_img{
+  width: 300rpx;
+  margin: 4rpx 20rpx 4rpx 8rpx;
+  border-radius: 15rpx;
+}
+.item_content_desc{
+  margin: 18rpx  20rpx 18rpx 10rpx;
+}
+.item_content_desc_text{
+  font-weight: 600;
+  font-size: 28rpx;
+}
+.item_content_desc_con{
+  font-size: 24rpx;
+  margin-top: 4rpx;
+}
+.gobuy{
+  text-align:right;
+  color: red;
+  font-size: 26rpx;
+  border: 2rpx solid red;
+  padding: 0 8rpx;
+  margin: 0;
+  border-radius: 20rpx;
+  width: 80rpx;
+  float: right;
+}
+.null_img{
+  margin-top: 200rpx;
+  margin-left: 40rpx;
+}

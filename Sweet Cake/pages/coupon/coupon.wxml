@@ -1,0 +1,23 @@
+<view class="coupon_main">
+  <view wx:if="{{coupon.length!==0}}">
+    <view class="coupon_item" wx:for="{{coupon}}" wx:key="*this">
+      <view class="coupon_left">
+        <view class="coupon_left_Num">￥ {{item}}</view>
+        <view class="coupon_left_text">商品优惠券</view>
+      </view>
+      <view class="coupon_middle">
+        <view class="coupon_mid_Num">满{{item+1}}可用</view>
+        <view class="coupon_mid_date">有效期至  2022.09.29 23:59</view>
+      </view>
+      <view class="coupon_right">
+        <view class="coupon_right_text">去使用</view>
+      </view>
+    </view>
+  </view>
+  <view wx:else>
+      <image src="{{assertUrl + 'img/youhuiquan.png'}}"></image>
+  </view> 
+  
+</view>
+
+

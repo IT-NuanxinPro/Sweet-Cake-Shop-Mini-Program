@@ -1,0 +1,39 @@
+[{
+  "_id": "62c43b5ecf4648de7d2e3648",
+  "text": "流心巧克力",
+  "imgUrl": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-d0fd619d-b424-42b7-9eb4-12d4070b76d1/66753705-a8a3-4e82-a19a-8e8f0a83481b.jpg",
+  "content": "当水果爱上了巧克力,奶油爱上了蛋糕,让您一步步陷进爱情的这张网,无法自拔",
+  "price": 188,
+  "start": 4,
+  "tag_title": "新品",
+  "num": 2,
+  "addCollect": false,
+  "isSelect": false,
+  "goods_sales": "100",
+  "swiperList": [
+    "detailsImg/流心巧克力.jpg"
+  ],
+  "favourName": "",
+  "buyWay": "先用后付",
+  "userId": "46bb4f",
+  "goodId": 11
+},{
+  "_id": "62c43b8dcf4648de7d2e3649",
+  "text": "巧克力蛋糕",
+  "imgUrl": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-d0fd619d-b424-42b7-9eb4-12d4070b76d1/92377fad-9117-4e1b-bd90-0b6ef4f29470.jpg",
+  "content": "如雪般白而细腻的奶油,加入覆盆子的酸甜,给您雪域般的浓情感受,甜而不腻",
+  "price": 155,
+  "start": 4.5,
+  "tag_title": "新品",
+  "num": 3,
+  "addCollect": false,
+  "isSelect": true,
+  "goods_sales": "200",
+  "swiperList": [
+    "detailsImg/巧克力蛋糕.jpg"
+  ],
+  "favourName": "",
+  "buyWay": "",
+  "userId": "46bb4f",
+  "goodId": 12
+}]

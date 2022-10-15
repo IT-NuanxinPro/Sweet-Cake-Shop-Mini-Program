@@ -1,0 +1,215 @@
+@import "/static/cart_icon/iconfont.wxss";
+.addbtn{
+  width:240rpx;
+  height:100rpx;
+  border:2rpx solid red;
+  color:red;
+  box-shadow: 0rpx 2rpx 16rpx rgb(225 0 0 / 0.2);
+  border-radius: 20rpx;
+  align-items: center;
+  margin: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-part{
+  width:100%;
+  height:calc(100vh - 80rpx);
+  background-color:rgba(238, 238, 238, 0.418);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login-tip{
+  font-size: 28rpx;
+  color:#666;
+}
+.login-img{
+  width:500rpx;
+  height:400rpx;
+  margin-bottom: 40rpx;
+}
+.login-btn{
+  margin-top: 30rpx;
+  background-color: #ff226491;
+  color:#fff;
+}
+.login-btn:active{
+  background-color: #ff2264ce;
+}
+.cart{
+  width:100%;
+  height:calc(100vh - 100rpx);
+  background-color:rgba(238, 238, 238, 0.418);
+  padding:10rpx;
+  box-sizing: border-box;
+  overflow-y:auto;
+}
+.cart_item{
+  display:flex;
+  justify-content:space-between;
+  align-items: center;
+  padding:20rpx;
+  box-sizing: border-box;
+  width:100%;
+  height:250rpx;
+  background-color:#fff;
+  border-radius: 20rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0rpx 2rpx 8rpx rgb(0 0 0 /0.2);
+}
+/* 未选中时--样式更改 */
+checkbox .wx-checkbox-input{
+  border-radius: 50%;/* 圆角 */
+  width: 40rpx; /* 背景的宽 */
+  height: 40rpx; /* 背景的高 */
+  border: 1rpx solid #ccc; /* 边框颜色*/
+}
+/* 选中后的--样式更改 */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked{
+  border: 1rpx solid #fff;/*无边框*/
+  background: red;/*背景色红色*/
+}
+/* 选中后的--对勾的样式更改 */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+  border-radius: 50%;/* 圆角 */
+  width: 40rpx;/* 选中后对勾大小,不要超过背景的尺寸 */
+  height: 40rpx;/* 选中后对勾大小,不要超过背景的尺寸 */
+  line-height: 40rpx;
+  text-align: center;/* 文字居中显示*/
+  font-size:30rpx; /* 对勾大小 30rpx */
+  color:#fff; /* 对勾颜色 白色 */
+  background: transparent;
+  transform:translate(-50%, -50%) scale(1);
+  -webkit-transform:translate(-50%, -50%) scale(1);
+}
+.cart_img{
+  width:220rpx;
+  height:210rpx;
+  border-radius: 5%;
+}
+.cart_info{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width:400rpx;
+  height:210rpx;
+  padding-left:20rpx;
+  box-sizing:border-box;
+}
+.cart_space{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.space_order{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width:300rpx;
+}
+.info_name{
+  font-size: 28rpx;
+  font-weight: 600;
+  color:#444;
+}
+.favour{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  width:80rpx;
+  height:30rpx;
+  font-size: 24rpx;
+  margin-left: 20rpx;
+  color:red;
+  border:1rpx solid rgb(218, 55, 55);
+  box-shadow: 0rpx 2rpx 8rpx rgb(255 0 0 / 0.2);
+}
+
+.buyWay{
+  font-size: 26rpx;
+  color:#000;
+  text-shadow: -1px -1px white, 1px 1px #333;
+  width: 120rpx;
+  height: 30rpx;
+}
+
+.icon-shanchu:active{
+  color:red;
+}
+.info_price{
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart_delete{
+  width:50rpx;
+  height:50rpx;
+}
+.num_tool{
+  display: flex;
+  justify-content: space-between;
+  width:200rpx;
+  height:60rpx;
+}
+.num_tool_item{
+  background-color: #fff;
+  box-shadow: 0rpx 6rpx 16rpx rgb(0 0 0 / 0.1);
+  color:#444;
+  width:60rpx;
+  height:50rpx;
+  margin:5rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20rpx;
+}
+.tool_item_active:active{
+  color:#aaa;
+  background-color: rgba(238, 238, 238, 0.322);
+}
+.num{
+  width:80rpx;
+}
+
+.footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height:100rpx;
+  font-size:32rpx;
+  color:#999;
+  padding-right: 10rpx;
+  box-sizing: border-box;
+}
+.footer-other{
+  background-color:#fff;
+  width:100%;
+  position: fixed;
+  bottom: 0;
+  border-bottom: 2rpx solid pink;
+}
+
+.footer-l{
+  flex:2.5;
+  padding:20rpx;
+  box-sizing: border-box;
+}
+.text-y{
+  color:red;
+  font-weight: 900;
+  font-size: 34rpx;
+}
+.text-total{
+  font-size: 32rpx;
+}
+.submit-btn{
+  height:80rpx;
+  line-height: 80rpx;
+  flex:0.8;
+  background-color:red;
+  color: #fff;
+  border-radius: 98rpx;
+}
+

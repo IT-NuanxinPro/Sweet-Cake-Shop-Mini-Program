@@ -1,0 +1,66 @@
+.goodList-tags{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 10px;
+    margin-left:15rpx ;
+}
+
+.van-button--mini{
+    margin-left: 10rpx;
+    font-weight: 500;
+    color: #fff7fa;
+    border-radius: 10rpx;
+}
+
+
+.card-class{
+    background-color: ccc;
+    display: flex;
+    flex-direction: column;
+}
+
+.custom_class{
+    background-color: #fff;
+    border-radius: 10rpx;
+    margin-top: 10rpx;
+    padding: 10rpx;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-class,.price-class{
+    margin-left: 25rpx;
+}
+
+.goodList-nums{
+    position: absolute;
+    left: 150rpx;
+    bottom: 0;
+    font-size: 20rpx;
+    font-weight: 500;
+}
+
+.goodList-more{
+    position: absolute;
+    right: 10rpx;
+    bottom: -10rpx;
+    font-size: 20rpx;
+    font-weight: 500;
+}
+
+
+.toTop{
+  position: fixed;
+  right: 20rpx;
+  bottom: 26rpx;
+  width: 75rpx;
+  height: 75rpx;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10rpx #ccc;
+}

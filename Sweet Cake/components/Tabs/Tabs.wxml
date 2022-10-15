@@ -1,0 +1,30 @@
+<view>
+  <view class="tabs">
+    <view
+      wx:for="{{tabs}}"
+      wx:key="id"
+      class="tabs-title-item {{item.isActive ? 'isActive':''}}"
+      bindtap="changeIndex"
+      data-index="{{index}}"
+    >
+      <block wx:if="{{item.name==='评论'?true:false}}">
+        <view class="comment-container">
+          {{item.name}}
+          <text class="comment">{{commentNum}}</text>
+        </view>
+      </block>
+      <block wx:if="{{item.name!=='评论'?true:false}}">
+        {{item.name}}
+      </block>
+
+    </view>
+  </view>
+
+  <view style="height:974rpx;">
+    <slot name="order"></slot>
+    <slot name="comment"></slot>
+    <slot name="merchant"></slot>
+    <slot></slot>
+  </view>
+</view>
+

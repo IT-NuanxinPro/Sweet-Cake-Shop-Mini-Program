@@ -1,0 +1,54 @@
+<block wx:if="{{oldaddress.length>0?true:false}}">
+  <view class="address-list">
+    <view
+      class="address-item"
+      wx:for="{{oldaddress}}"
+      wx:key="index"
+      data-address="{{item}}"
+    >
+      <view class="item-top">{{item.name}} {{item.mobile}}</view>
+      <view class="item-content">{{item.city}} {{item.street}} </view>
+      <view class="item-bottom">
+        <view
+          class="left"
+          bindtap="checkDefault"
+          data-index="{{index}}"
+        >
+          <icon type="{{item.isDefault ? 'success' : 'circle'}}" size="15"></icon>
+          设为默认地址
+        </view>
+        <view class="right">
+          <view
+            class="txt"
+            catchtap="checkDelete"
+            data-index="{{index}}"
+          >删除
+          </view>
+          <view
+            class="txt"
+            catchtap="chickEdit"
+            data-index="{{index}}"
+          >编辑
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 新增地址 -->
+  <view class="add-address" catchtap="addAddress">
+    <view class="txt">新增地址</view>
+  </view>
+</block>
+<!-- 没有地址布局 -->
+<block wx:else>
+  <view class="address-none">
+    <view class="none-content">
+      <image src="../../static/home_icon/kongkongruye.png"></image>
+      <!-- <text class="txt">请在订单页面添加收货地址</text> -->
+      <view class="add-address" catchtap="addAddress">
+        <view class="txt">新增地址</view>
+      </view>
+    </view>
+  </view>
+</block>
+

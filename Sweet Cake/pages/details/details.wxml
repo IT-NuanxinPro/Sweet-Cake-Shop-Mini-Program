@@ -1,0 +1,269 @@
+<view class="detail">
+	<view class="img-header">
+		<view class="banner">
+			<swiper
+			 class="swiper"
+			 circular="true"
+			 bind:change="swiperChange"
+			 autoplay="true"
+			 duration="1000"
+			 interval="3000"
+			>
+				<swiper-item wx:for="{{cake.swiperList}}" wx:key="index" bindtap="previewHandler">
+					<image class="swiper-img" src="{{assertUrl + item}}" mode="widthFix" />
+				</swiper-item>
+			</swiper>
+			<view class="banner-current">{{swiperIndex+1}}/{{cake.swiperList.length}}</view>
+		</view>
+
+		<view class="img-footer">
+			<view class="footer-money">
+				￥
+				<text class="footer-money-oldnum">{{cake.oldPrice?cake.oldPrice:cake.price}}</text>
+				<van-tag
+				 custom-class="footer_money_num"
+				 size="large"
+				 round
+				 type="danger"
+				 wx:if="{{cake.oldPrice?true:false}}"
+				>
+					<text class="price-desc">券后￥</text>
+					<text class="price-discount">{{cake.price}}</text>
+				</van-tag>
+
+				<view class="share-img" bindtap="shareWays">
+					<image class="share-image" src="{{assertUrl + 'detailsImg/fenxiang.png'}}" mode="aspectFit" />
+					<text class="share_text">分享</text>
+				</view>
+
+			</view>
+
+			<view class="footer-title">
+				<van-tag size="20rpx" round color="#7232dd">{{cake.tag_title}}</van-tag>
+				<text class="footer-text">月销  {{cake.goods_sales}}+</text>
+			</view>
+
+			<view class="footer-title-con">
+				<text>【{{cake.text}}】{{cake.content}}</text>
+				<van-tag size="20rpx" custom-class="tag_text" color="#f2826a">优惠促销</van-tag>
+			</view>
+
+		</view>
+	</view>
+
+	<view class="middle-coupon">
+		<view class="coupon-left">
+			<view>领劵</view>
+			<view class="fillMoney">
+				<view class="dot-left" />
+				<view>满1000减200</view>
+				<view class="dot-right" />
+			</view>
+			<view class="fillMoney">
+				<view class="dot-left" />
+				<view>满400减50</view>
+				<view class="dot-right" />
+			</view>
+			<view class="fillMoney">
+				<view class="dot-left" />
+				<view>满100减10</view>
+				<view class="dot-right" />
+			</view>
+		</view>
+
+		<view>
+			<image class="xiangyou" src="{{assertUrl + 'detailsImg/xiangyou.png'}}" mode="aspectFit" />
+		</view>
+	</view>
+
+	<view class="img-detail">
+		<van-tabs
+		 active="{{ active }}"
+		 bind:change="onChange"
+		 sticky="true"
+		 lazy-render
+		 animated="true"
+		>
+			<van-tab title="图文详情" title-style="font-size:26rpx;">
+				<scroll-view class="scroll-view" scroll-y="true">
+					<view class="banner-list" wx:for="{{cake.swiperList}}" wx:key="index">
+						<image src="{{assertUrl + item}}" mode="widthFix" />
+					</view>
+				</scroll-view>
+			</van-tab>
+			<van-tab title="商品参数" title-style="font-size:26rpx;">
+				<view class="good-options">
+					<view class="good-title">
+						商品参数
+					</view>
+					
+					<view class="goods">
+						<view class="goods-name">商品名称</view>
+						<view>{{cake.text}}</view>
+					</view>
+
+					<view class="goods">
+						<view class="goods-name">商品得分</view>
+						<view>{{cake.start}}</view>
+					</view>
+
+					<view class="goods">
+						<view class="goods-name">所选商品总数</view>
+						<view>{{count<=1? 0:count}}</view>
+					</view>
+
+					<view class="goods">
+						<view class="goods-name">所选商品单价</view>
+						<view>{{cake.price}}</view>
+						</view>
+					</view>
+			</van-tab>
+		</van-tabs>
+	</view>
+
+	<van-goods-action custom-class="goodNav">
+		<van-goods-action-icon
+		 icon="chat-o"
+		 text="客服"
+		 dot
+		 open-type="contact"
+		/>
+		<van-goods-action-icon
+		 icon="cart-o"
+		 text="购物车"
+		 info="{{count<=1?'':count}}"
+		 bind:click="goToCart"
+		/>
+		<van-goods-action-icon
+		 icon="fire-o"
+		 text="收藏"
+		 bind:click="addCollect"
+		 icon-class="{{isCollect?'iconCss':''}}"
+		 text-class="{{isCollect?'iconCss':''}}"
+		/>
+		<van-goods-action-button text="加入购物车" type="warning" catchtap="addCart" />
+		<van-goods-action-button text="立即购买" bind:click="goToBuy" />
+	</van-goods-action>
+
+	<van-popup
+	 show="{{ show }}"
+	 bind:close="onClose"
+	 position="bottom"
+	 custom-style="height: 90%;"
+	 closeable
+	 close-icon="close"
+	 round
+	 z-index="999"
+	>
+		<view style="padding:22rpx">
+			<view class="popup-top">
+				<image class="popup-top-img" src="{{cake.imgUrl}}" mode="aspectFit" />
+				<view>
+					<view class="popup-top-price">
+						￥
+						<text class="footer-money-oldnum" style="font-size:42rpx;margin-top:-5rpx;" >{{cake.oldPrice?cake.oldPrice:cake.price}}</text>
+						<van-tag
+						 custom-class="footer_money_num"
+						 size="large"
+						 round
+						 type="danger"
+						 wx:if="{{cake.oldPrice?true:false}}"
+						>
+							<text class="price-desc">券后￥</text>
+							<text class="price-discount" style="font-size:35rpx;">{{cake.price}}</text>
+						</van-tag>
+					</view>
+					<view class="popup-top-price-text">淘金币可抵1.88元</view>
+				</view>
+
+			</view>
+			<view class="popup-mark">
+				<view class="popup-mark-left">
+					<van-icon name="chat-o" size="37rpx" />
+					<text style="font-size: 26rpx; line-height: 48rpx; margin-left: 10rpx; ">199人评价"口感味道好"</text>
+				</view>
+				<view class="popup-mark-right">
+					<text style="font-size: 26rpx; line-height: 48rpx; margin-bottom:10rpx ;">全部(1800+)</text>
+					<van-icon name="arrow" size="36rpx" custom-style="transform:translateY(5rpx)" />
+				</view>
+			</view>
+			<!--分割线-->
+			<view class="popup-line" />
+
+			<!--获取位置-->
+			<view class="popup-location" style="margin-top: 5rpx;">
+				<view class="popup-location-top">
+					<text class="location-top-title">配送区域</text>
+					<text>(配送地可能会影响库存,请正确选择)</text>
+				</view>
+				<view class="popup-location-bottom" style="margin-top: 5rpx;">
+					<view class="popup-location-left">
+						<van-icon name="location-o" size="29rpx" />
+						<text style="font-size: 26rpx; line-height: 48rpx; margin-left: 10rpx;" size="10rpx">天津市 西青区 精武镇</text>
+					</view>
+					<view class="popup-location-right">
+						<van-icon name="arrow" size="40rpx" custom-style="transform:translateY(8rpx)" />
+					</view>
+				</view>
+			</view>
+
+			<view class="popup-line" />
+
+			<!-- 购买方式 -->
+			<view class="popup-buy-way">
+				<view class="popup-buy-title" style="font-size: 28rpx;">购买方式</view>
+				<view class="popup-buy-content">
+				<block wx:for="{{popupList.buyWay}}" wx:key="index" >
+					<button class="buy-btn"
+					style="{{index == buyIndex ?'color:#f45f0b; border: 1rpx solid #f45f0b;':'color:black'}}"
+					data-index="{{index}}" bindtap="changeBuyWay"
+					data-way="{{item}}"
+					>{{item}}</button>
+				</block>
+				</view>
+			</view>
+
+			<view class="popup-line" style="margin-top:28rpx" />
+
+			<!-- 口味选择 -->
+			<view class="popup-favour">
+				<view style="font-size: 28rpx;">口味</view>
+				<view class="popup-favour-content" wx:for="{{popupList.favour}}" wx:key="index" >
+				    <button size="mini"  style="{{index == favourIndex ?'color:#f45f0b; border: 1rpx solid #f45f0b;':'color:black'}}" data-name="{{item}}" data-index="{{index}}" bindtap="changeColor">{{item}}</button>
+				</view>
+			</view>
+
+			<view class="popup-line" />
+			<!-- 净含量 -->
+			<view class="popup-weight">
+				<view style="font-size: 28rpx;">净含量</view>
+				<view class="popup-content">
+					<van-button size="small" color="#f45f0b" plain>500g</van-button>
+				</view>
+			</view>
+
+			<view class="popup-line" />
+			<!-- 购买数量 -->
+			<view class="popup-buy-num">
+				<view style="font-size:24rpx;">
+					<text style="font-size: 28rpx;margin-right: 10rpx;">购买数量</text>
+					<text>(限购9件)有货</text>
+				</view>
+				<view style="display: flex;">
+					<button class="num-btn" catchtap="sub">-</button>
+					<text class="popup-num">{{count}}</text>
+					<button class="num-btn" catchtap="add">+</button>
+				</view>
+			</view>
+            <van-tag type="danger" round custom-class="buy_way_tag">0元下单</van-tag>
+			<view class="popup-confirm" bindtap="confirCart" wx:if="{{!buyFlag}}">确认</view>
+			<view class="popup-confirm" bindtap="confirBuy" wx:else>{{WayFlag?'0元下单,先用后付':'立即购买'}}</view>
+		</view>
+	</van-popup>
+</view>
+
+<!-- 一键回到顶部 -->
+<view class="toTop" hidden="{{!scrollTop}}">
+	<van-icon name="back-top" color="#201f1e" size="50rpx" bindtap="toTop" />
+</view>
+

@@ -1,0 +1,52 @@
+<view>
+  <view class="order">
+    <van-steps
+      steps="{{ steps }}"
+      active="{{ active }}"
+      custom-class="order"
+      active-color="#ff4c00"
+      desc-class="order_text"
+    />
+  </view>
+
+  <view
+    class="business"
+    wx:for="{{business}}"
+    wx:key="id"
+  >
+    <!--  -->
+    <view class="business-content">
+      <!-- 地址以及电话 -->
+      <view class="content-phone">
+        <view class="content-item">
+          <view class="title">
+            {{item.address_title}}
+          </view>
+          <view class="detail">
+            <image src="{{assertUrl + 'businessImg/zuobiao.png'}}" class="location-img" />
+            {{item.address_detail}}
+          </view>
+        </view>
+        <view class="img" catchtap="callPhone">
+          <image src='{{assertUrl + "businessImg/dianhua.png"}}' class="phone-img" />
+        </view>
+      </view>
+      <!-- 商家信息 -->
+      <view class="business-message">
+        <view class="title">商家信息</view>
+        <view class="detail">商家品类: {{item.business_classify}}</view>
+        <view class="detail">营业时间: {{item.business_time}}</view>
+      </view>
+      <!-- 资质 -->
+      <view class="operate">
+        查看营业资质
+      </view>
+    </view>
+    <!-- 举报 -->
+    <view class="report">
+      举报商家
+    </view>
+
+  </view>
+</view>
+

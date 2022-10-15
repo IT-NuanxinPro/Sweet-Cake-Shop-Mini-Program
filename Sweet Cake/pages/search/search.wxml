@@ -1,0 +1,51 @@
+<!--搜索框-->
+<view class="search">
+  <van-search 
+  value="{{value}}"
+  shape="round"
+  placeholder="请输入商品关键词"
+  bind:change="changeVal"
+  bind:search="search"  
+  data-url="/pages/searchRes/searchRes"
+  use-action-slot>
+  <view slot="action" bindtap="search" data-url="/pages/searchRes/searchRes" class="search-btn">
+      <van-button  hairline  round size="small"  color="linear-gradient(to right, #4bb0ff, #6149f6)">搜索</van-button>
+  </view>
+</van-search>
+</view>
+
+<!-- 搜索历史记录 -->
+<view class="search-history">
+  <view class="search-history-title">
+    <view>搜索历史</view>
+    <view bindtap="clearHistory">
+    <van-icon name="delete-o" color="red" size="30rpx" style="margin-left:10rpx"/>
+    清除
+    </view>
+  </view>
+  <view class="search-history-content">
+    <view catchtap="clickHistory"  bindlongpress="longPress" data-content="{{item}}" data-url="/pages/searchRes/searchRes" class="search-history-item" wx:for="{{searchHistory}}" wx:key="index">
+      {{item}}
+    </view>
+  </view>
+</view>
+
+<!-- 搜索发现 -->
+<view class="search-found">
+  <view class="search-found-title">
+    <view>搜索发现</view>
+    <view>
+      <van-icon name="eye-o" size="40rpx" color="#000" bindtap="showContent" />
+    </view>
+  </view>
+  <view class="search-found-content" wx:if="{{showFlag}}">
+    <view class="search-found-item" wx:for="{{searchFound}}" wx:key="index">
+      <view class="search-found-item-title" bindtap="clickHistory" data-content="{{item}}" data-url="/pages/searchRes/searchRes">{{item}}</view>     
+    </view>
+  </view>
+</view>
+
+<!-- 提示框 -->
+<van-toast id="van-toast" />
+
+

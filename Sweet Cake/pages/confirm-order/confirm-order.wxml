@@ -1,0 +1,92 @@
+<view class="order">
+  <view class="address">
+    <view class="address-left">
+      <text class="iconfont icon-dingwei1" style="font-size: 58rpx;"></text>
+      <view class="address-info">
+        <block wx:if="{{address.name}}">
+          <view>{{address.city+address.street}}</view>
+          <view class="text">{{address.name+':'+address.mobile}}</view>
+        </block>
+        <block wx:else><view class="address-tip">请选择配送地址</view></block>
+      </view>
+    </view>
+    <navigator url="/pages/editaddress/editaddress">
+      <text class="iconfont icon-jiantou_liebiaoxiangyou_o" style="font-size: 58rpx;"></text>
+    </navigator>
+  </view>
+  <view class="goods">
+    <view class="goods-items" >
+      <view class="goods-item" wx:for="{{order}}" wx:key="id">
+        <image class="good-img" src="{{item.imgUrl}}" mode="widthFix" />
+        <view class="good-info">
+          <view>
+            <view class="good-title">
+              {{item.text}}
+              <view class="favour" wx:if="{{item.favourName}}">{{item.favourName}}</view>
+            </view>
+          </view>
+          <view class="good-text">
+            <text class="good-num iconfont icon-cheng">{{item.num}}</text>
+            <text class="o-price">￥ {{item.price}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="tickets space">
+      <view class="ticket-l">
+        <text class="icon">劵</text>
+        <text class="ticket-text">可用优惠券</text>
+      </view>
+      <text class="ticket-r">暂无优惠券可用</text>
+    </view>
+    <view class="receipt space">
+      <text class="ticket-text">开具发票</text>
+      <text class="ticket-r">本次不开具发票 ></text>
+    </view>
+    <view class="remark space" bindtap="showremark">
+      <text class="ticket-text">订单备注</text>
+      <view class="ticket-r" >
+        <input class="p-input" placeholder="无备注 >" style="text-align: right;color:#333;" value="{{remarktext}}"/>
+      </view>
+    </view>
+    <van-popup
+            show="{{show}}"
+            round
+            position="bottom"
+            custom-style="height: 100%"
+            custom-style="width:100%"
+            bind:close="onClose"
+    >
+      <view class="remark-view" style="height:800rpx">
+        <text class="remark-title">订单备注</text>
+        <textarea class="remark-ipt" bindinput="input" rows="3" placeholder="选填,请先和商家协商一致,付款后商家可见" maxlength="60" value="{{remarktext}}">
+          <text class="currentWordNumber">{{currentNoteLen}}/{{noteMaxLen}}个字</text>
+        </textarea>
+        <view class="remark-btn" bindtap="submitremark">确定</view>
+      </view>
+    </van-popup>
+    <view class="small-price">
+      小计: <text class="price">￥ {{totalPrice}}</text>
+    </view>
+  </view>
+  <view class="pay" >
+    <view class="p p-l">
+      <view class="p-l-item"><text class="iconfont icon-zhifupingtai-zhifubao" style="font-size: 58rpx;"></text>支付宝支付</view>
+      <view class="p-l-item"><text class="iconfont icon-zhifupingtai-weixin" style="font-size: 58rpx;"></text>微信支付</view>
+      <view class="p-l-item"><text class="iconfont icon-zhifupingtai-yinlian" style="font-size: 46rpx;margin-right: 16rpx;"></text>银行卡支付</view>
+    </view>
+    <radio-group class="p p-r" bindchange="bindchange">
+      <radio value="zfb" checked="true"></radio>
+      <radio value="wx"></radio>
+      <radio value="card"></radio>
+    </radio-group>
+  </view>
+</view>
+<view class="bottom-wrap space">
+  <view class="b-l">
+    合计:<text class="total-price">￥ {{totalPrice}}</text>
+    <text wx:if="{{signFlag}}" class="PayPrice" >  可确认收货后在付款￥</text>
+    <text wx:if="{{signFlag}}" style="color:red;font-weight: 600;">{{price}}</text>
+  </view>
+  <view class="b-r" bindtap="handlePay">提交支付</view>
+</view>

@@ -1,0 +1,27 @@
+<tabs bindtabsItemChange="changeIndex" tabs="{{tabs}}">
+  <block wx:if="{{activeIndex===0}}">
+    <view class="order_main">
+      <view
+        wx:for="{{goodList}}"
+        wx:key="id"
+        class="order_item"
+        slot="orders">
+          <view class="order_no_row">
+            <view class="order_no_text">订单编号</view>
+            <view class="order_no_value">{{item.orderNum}}</view>
+          </view>
+          <view class="order_content_row" wx:for="{{item.list}}" wx:key="*this">
+            <image class="order_content_img" mode="widthFix" src="{{item.imgUrl}}"></image>
+            <view class="order_content_main">
+              <view class="order_content_main_title">{{item.text}}</view>
+              <view class="order_content_main_content">{{item.content}}</view>
+              <view class="order_content_main_price"> 实付款 ￥ {{item.price}}</view>
+            </view>
+          </view>
+        </view>
+    </view>
+  </block>
+  <block wx:else >
+    <image src="{{assertUrl + 'img/NoOrder.png'}}" class="no-order-img"></image>
+  </block>
+</tabs>

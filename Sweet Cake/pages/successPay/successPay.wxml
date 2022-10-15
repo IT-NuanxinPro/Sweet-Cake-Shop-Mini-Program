@@ -1,0 +1,11 @@
+
+<view class="root">
+    <view class="pay-success">
+        <van-icon name="passed" color="#ff5e60" size="45rpx" />
+        <text class="success-text">支付成功</text>
+        <view class="success-btn" >
+           <button class="btn" size="mini" bindtap="goToHome">返回首页</button>
+           <button class="btn" size="mini" bindtap="goToOrder">查看订单</button>
+        </view>
+    </view>
+</view>

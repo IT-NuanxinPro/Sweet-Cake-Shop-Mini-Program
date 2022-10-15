@@ -1,0 +1,67 @@
+<!--搜索框-->
+<view class="search">
+	<van-search
+	 value="{{value}}"
+	 shape="round"
+	 placeholder="请输入商品关键词"
+	 bind:change="changeVal"
+	 bind:search="search"
+	 bind:cancel="onCancel"
+	 use-action-slot
+	>
+		<view slot="action" bindtap="search">搜索</view>
+	</van-search>
+</view>
+
+<!-- 下拉菜单 -->
+<view class="dropdown">
+	<van-dropdown-menu>
+		<van-dropdown-item popup-style ="border-radius: 0 0 23rpx 23rpx;"  bind:change="changeTag"  options="{{option1}}" value="{{ value1 }}"/>
+		<van-dropdown-item popup-style ="border-radius: 0 0 23rpx 23rpx;"  bind:change="changeSort" options="{{ option2 }}" value="{{ value2 }}" />
+	</van-dropdown-menu>
+</view>
+
+<!-- 渲染商品列表 -->
+<view class="card-class">
+	<van-card
+	 tag="{{item.tag_title}}"
+	 price="{{item.price}}"
+	 origin-price="{{item.oldPrice}}"
+	 title="{{item.text}}"
+	 thumb-mode="aspectFit"
+	 thumb="{{ item.imgUrl }}"
+	 lazy-load="true"
+	 wx:for="{{goodList}}"
+	 wx:key="id"
+	 catchtap="goToDetail"
+	 data-cake="{{item}}"
+	 title-class="title-class"
+	 price-class="price-class"
+	 custom-class="custom_class"
+	>
+		<view slot="tags" class="goodList-tags">
+			<van-button size="mini" color="#ff0036 ">包邮</van-button>
+			<van-button size="mini" color="#ff0036">先用后付</van-button>
+			<van-button size="mini" color="#ff0036">概不退换</van-button>
+
+		</view>
+		<view slot="bottom" class="goodList-nums">
+			<text >{{item.goods_sales + '+人付款'}}</text>
+		</view>
+		<view slot="num" class="goodList-more">
+			 <van-icon name="ellipsis" size="42rpx"/>
+		</view>
+		>
+	</van-card>
+</view>
+
+<!-- 一键回到顶部 -->
+<view class="toTop" hidden="{{!scrollTop}}">
+	<van-icon
+	 name="back-top"
+	 color="#201f1e"
+	 size="50rpx"
+	 bindtap="toTop"
+	/>
+</view>
+

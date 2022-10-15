@@ -1,0 +1,128 @@
+page{
+	background-color: #edece8;
+}
+.user_info_wrap{
+	height: 33vh;
+	overflow: hidden;
+	background-color: #f6bec8;
+	position: relative;
+}
+.user_img_wrap{
+	position: relative;
+}
+.user_bg{
+	height: 33vh;
+	/* 高斯模糊 */
+	filter: blur(10rpx);
+	width: 100%;
+}
+.user_info{
+	position:absolute;
+	left: 50%;
+	transform: translate(-50%);
+	top: 18%;
+	text-align: center;
+}
+.user_icon{
+	width: 150rpx;
+	height: 150rpx;
+	border-radius: 50%;
+}
+.user_name{
+	color: aliceblue;
+	margin-top: 12rpx;
+	font-size: 32rpx;
+}
+.user_btn{
+	position:absolute;
+	left: 50%;
+	transform: translate(-50%);
+	top: 30%;
+	color: #fff;
+}
+.user_content{
+	position: relative;
+}
+.user_main{
+	position:absolute;
+	width: 92%;
+	left: 50%;
+	transform: translate(-50%);
+	top:-52rpx;
+	color: #666;
+	padding-bottom: 60rpx;
+}
+.history_wrap{
+	background-color: #fff;
+	display: flex;
+	border-radius: 16rpx;
+}
+.history_wrap navigator,.his_cart {
+	flex:1;
+	text-align: center;
+	padding: 4px;
+}
+.his_num{
+	color: #f6bec8
+}
+.his_name{
+	font-size: 32rpx;
+}
+.order_wrap{
+	background-color: #fff;
+	margin-top: 20rpx;
+	border-radius: 10rpx;
+	font-size: 36rpx;
+}
+.order_title{
+	padding: 16rpx;
+	border-bottom: 1px solid #ccc;
+	text-align: left;
+}
+.order_content{
+	display: flex;
+	padding:0 12rpx;
+}
+.order_content navigator{
+	flex:1;
+	text-align: center;
+	padding: 4rpx 0rpx;
+}
+.iconfont{
+	color: #f6bec8;
+	font-size: 40rpx;
+	/* padding-bottom: 4rpx; */
+}
+.order_name{
+	font-size: 30rpx;
+}
+.address_warp{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20rpx;
+	background-color: #fff;
+	padding: 16rpx;
+	border-radius: 10rpx;
+	font-size: 36rpx;
+}
+.app_info_wrap{
+	margin-top: 20rpx;
+	background-color: #fff;
+	border-radius: 10rpx;
+	font-size: 36rpx;
+}
+.app_info_item{
+	padding: 16rpx;
+	border-bottom: 1px solid #edece8;
+}
+.app_info_contact{
+	display: flex;
+	justify-content: space-between;
+}
+.recommend_wrap{
+	margin-top: 20rpx;
+	background-color: #fff;
+	padding: 16rpx;
+	border-radius: 10rpx;
+	font-size: 36rpx;
+}

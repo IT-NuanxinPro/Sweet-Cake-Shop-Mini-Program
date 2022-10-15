@@ -1,0 +1,71 @@
+
+<!-- 登录前显示 -->
+<view class="login-part" wx:if="{{!hasUserInfo}}">
+  <image class="login-img" src="../../static/cart_icon/cart.png" ></image>
+  <text class="login-tip">亲,你需要登录才能查看购物车哟~</text>
+  <button class="login-btn" size="mini" bindtap="login">立即登录</button>
+</view>
+<!-- 登录后显示 -->
+<block wx:else>
+  <!-- 购物车内容 -->
+  <view class="cart">
+    <!-- 购物车列表  -->
+    <view class="cart_item" wx:for="{{list}}" wx:key="foodId">
+      <!-- 复选框 -->
+      <view class="cart_select">
+        <checkbox-group>
+          <checkbox checked="{{item.isSelect}}" bindtap="handleItemChange" data-good="{{item}}" ></checkbox>
+        </checkbox-group>
+      </view>
+      <!-- 商品图片 -->
+      <navigator >
+        <image class="cart_img" src="{{item.imgUrl}}" catchtap="gotoDetail" data-cake="{{item}}" mode="widthFix" />
+      </navigator>
+      <!-- 信息 -->
+      <view class="cart_info">
+        <view class="cart_space">
+          <view class="space_order">
+            <view class="info_name">{{item.text}}</view>
+            <view class="favour" wx:if="{{item.favourName}}">{{item.favourName}}</view>
+          </view>
+          <view class="iconfont icon-shanchu" style="color:#888;" bindtap="delete_item" data-index="{{index}}"></view>
+        </view>
+        <view class="buyWay" wx:if="{{wayFlag}}" >{{item.buyWay}}</view>
+        <view class="info_price">
+          <view class="text-y">¥ {{item.price}}</view>
+          <view class="num_tool">
+            <view class="num_tool_item tool_item_active" bindtap="numChangeDec" data-good="{{item}}" data-index="{{index}}">-</view>
+            <view class="num_tool_item num">{{item.num}}</view>
+            <view class="num_tool_item tool_item_active" bindtap="numChangeAdd" data-good="{{item}}">+</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 底部结算栏 -->
+  <view class="footer footer-other">
+    <view class="footer footer-l">
+      <view class="footer">
+        <view class="all-select-btn">
+          <checkbox-group >
+            <checkbox checked="{{allSelect}}" bindtap="handleItemAllChange"/>
+            全选
+          </checkbox-group>
+        </view>
+      </view>
+      <view class="footer l-price">
+        <text>合计:</text>
+        <text class="text-y text-total" data-cake="item">￥ {{totalPrice}}</text>
+      </view>
+    </view>
+    <button class="submit-btn" bindtap="pay">
+      结算
+    </button>
+  </view>
+</block>
+
+
+
+
+
+

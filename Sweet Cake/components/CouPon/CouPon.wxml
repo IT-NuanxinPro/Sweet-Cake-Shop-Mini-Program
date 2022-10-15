@@ -1,0 +1,13 @@
+<view class="coupon" >
+    <view class="coupon-view">
+        <view class="coupon-left">
+            <text class="couponPrice">￥50</text>
+            <text style="font-size: 12px; padding-top: 2rpx;">满51可用</text>
+        </view>
+        <view class="coupon-right" bindtap="receive">
+            <text class="getCoupon" wx:if="{{!flag}}">立即领取</text>
+            <text class="getCoupon" wx:if="{{flag}}">已领取</text>
+            <view wx:if="{{flag}}" class="coupon-right-text">已领取</view>
+        </view>
+    </view>
+</view>

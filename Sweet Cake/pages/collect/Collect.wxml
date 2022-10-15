@@ -1,0 +1,17 @@
+<view>
+  <view class="collect_main" wx:if="{{collectlist.length!==0}}">
+    <view class="collect_item" wx:for="{{collectlist}}" wx:key="*this">
+      <view class="item_content">
+        <image class="item_content_img" mode="widthFix" src="{{item.imgUrl}}"></image>
+        <view class="item_content_desc">
+          <view class="item_content_desc_text">{{item.text}}</view>
+          <view class="item_content_desc_con" >{{item.content}}</view>
+          <view class="gobuy">去购买</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:else>
+    <image class="null_img" src="{{assertUrl + 'img/kongkongruye.png'}}"></image>
+  </view>
+</view>

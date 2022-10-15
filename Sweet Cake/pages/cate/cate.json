@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "tabs": "../../components/Tabs/Tabs",
+    "leaveWords":"../../components/LeaveWords/LeaveWords",
+    "Business":"../../components/Business/Business"
+  },
+  "navigationBarTitleText": "商品分类",
+  "navigationBarBackgroundColor": "#FFB9C5",
+  "enablePullDownRefresh": true,
+  "backgroundColor": "#FFB9C5"
+}

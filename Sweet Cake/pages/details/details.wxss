@@ -1,0 +1,400 @@
+.detail{
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+}
+.img-header{
+  width: 100%;
+  background-color: #fff;
+}
+
+.banner{
+  width: 100%;
+  background-color: #fff;
+  position: relative;
+  height: 680rpx;
+}
+
+.swiper{
+	width: 750rpx;
+    height: 680rpx
+}
+.swiper-img {
+	width: 750rpx;
+	margin: 0;
+	padding: 0;
+	vertical-align: bottom;
+}
+
+.banner-current {
+	position: absolute;
+	right: 24rpx;
+	bottom: 20rpx;
+	color: #fff;
+	font-size: 30rpx;
+	width: 57rpx;
+	height: 37rpx;
+	box-shadow: 0px 0px 5px #ccc;
+	background: rgba(0, 0, 0, 0.5);
+	border-radius: 50%;
+	text-align: center;
+	padding: 0;
+}
+
+.img-footer{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 14rpx;
+  padding-top: 6rpx;
+}
+.footer-title{
+  margin-top: 18rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer-text{
+  font-size: 27rpx;
+}
+
+
+.footer-money{
+  margin-top: 26rpx;
+  font-size: 30rpx;
+  font-weight: 500;
+  color: #ef1d34;
+  display: flex;
+}
+
+.footer-money-oldnum{
+  font-size: 38rpx;
+  margin-right: 15rpx;
+  font-weight: bold;
+  margin-top: 0;
+  color:#ef1d34;
+}
+
+.footer_money_num{
+  margin-top:-7rpx;
+}
+
+.price-desc{
+  font-size: 23rpx;
+  font-weight: bold;
+}
+
+.price-discount{
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+
+.footer-title-con{
+  margin-top: 10rpx;
+  text-indent: 8rpx;
+  color: #000;
+}
+
+.tag_text{
+  margin-left: 10rpx;
+  text-align: center;
+  transform: translateY(-4rpx);
+}
+
+
+.share-img{
+  position: absolute;
+  right: 18rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  margin-top: 0;
+}
+.share-image{
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.share_text{
+  margin-left: 10rpx;
+  font-size: 27rpx;
+  color: #666;
+}
+
+.middle-coupon{
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80rpx;
+  margin: 12rpx auto;
+  background-color: #fff;
+  font-size: 20rpx;
+  padding: 16rpx;
+}
+.coupon-left{
+  width: 100%;
+  height: 90rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+/* 优惠卷 */
+.fillMoney{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40rpx;
+  width: 140rpx;
+  color: #ff5e60;
+  border: 2rpx solid #ff5e60;
+  margin: auto 10rpx;
+}
+.dot-left,.dot-right {
+  display: block;
+  width: 18rpx;
+  height: 18rpx;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  z-index: 999;
+}
+.dot-left {
+  bottom: 6px;
+  left: -6px;
+  border-right:2rpx solid#ff5e60;
+}
+.dot-right {
+  bottom: 6px;
+  right: -6px;
+  border-left: 2rpx solid#ff5e60;
+}
+.xiangyou{
+  width: 46rpx;
+  height: 46rpx;
+}
+
+
+/* 图文详情 */
+.scroll-view{
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+.banner-list {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 6rpx;
+	background-color: #f1f1f1;
+	box-shadow: 0px 0px 5px #ccc;
+}
+
+.good-options{
+  padding: 16rpx;
+}
+.img-detail{
+  width: 100%;
+  height: 450rpx;
+  font-size: 24rpx;
+  background-color: #fff;
+}
+.good-title{
+  font-size: 26rpx;
+}
+.goods-name{
+  color: #878787;
+}
+.goods{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10rpx;
+}
+
+.iconCss{
+  color:#ee0a24;
+}
+
+.goodNav{
+  position: relative;
+  z-index:999;
+}
+
+
+/* 加入购物车 */
+.popup-top{
+  display: flex;
+  width: 100%;
+  color:#ef1d34;
+  margin-left: -16rpx;
+} 
+
+.popup-top-img{
+  width:190rpx;
+  height:130rpx;
+  border-radius: 30rpx;
+}
+
+.popup-top-price{
+  display: flex;
+  margin-top: 16rpx;
+  font-size: 30rpx;
+  font-weight:bold ;
+}
+
+.popup-top-price-text{
+  margin-left: 10rpx;
+  margin-top:12rpx;
+  font-size: 26rpx;
+  font-weight:bold ;
+  color:#f45f0b;
+}
+
+.popup-mark{
+  margin-top: 16rpx;
+  margin-left: 9rpx;
+  background-color: #f6f6f6;
+  width: 100%;
+  height: 48rpx;
+  border-radius: 12rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.popup-mark-left{
+  padding-left: 15rpx;
+  box-sizing: border-box;
+}
+
+.popup-line{
+  width: 100%;
+  height: 1rpx;
+  background-color: #e1dfdd;
+  margin: 22rpx 0;
+  padding: 0;
+}
+
+.popup-location-top{
+  font-size: 22rpx;
+  color:#666;
+}
+
+.location-top-title{
+  font-size: 28rpx;
+  color:#000;
+}
+
+.popup-location-bottom{
+  display: flex;
+  justify-content: space-between;
+}
+
+.popup-buy-content{
+  display: flex;
+  align-items: center;
+  margin-top: 26rpx;
+  
+}
+
+.buy-btn{
+  width:120rpx;
+  height:70rpx;
+  font-size: 24rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  margin-right: 40rpx;
+}
+
+.buy_way_tag{
+  position: absolute;
+  left: 29%;
+  top: -548rpx;
+}
+
+
+.popup-favour{
+  display: flex;
+  flex-direction: row;
+}
+
+.popup-favour-content{
+ margin-top: 45rpx;
+ transform: translateX(-55rpx);
+ box-sizing: border-box;
+ padding-right: 30rpx;
+
+}
+
+.popup-content{
+  margin-top:10rpx;
+  margin-left: 10rpx;
+}
+
+.popup-buy-num{
+  display: flex;
+  flex-direction: row;
+  margin-top: 10rpx;
+  justify-content: space-between;
+}
+
+.popup-num{
+  padding: 10rpx;
+  box-sizing: border-box;
+  margin-top: 5rpx;
+  font-size: 34rpx;
+}
+
+
+.num-btn{
+  width: 60rpx;
+  height: 60rpx;
+  margin-top: 10rpx;
+  background-color: #fff;
+  border: 1rpx solid #e1dfdd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.popup-confirm{
+  position: fixed;
+  bottom: 6rpx;
+  left: 0;
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  border-radius: 30rpx;
+  padding:0 16rpx;
+  box-sizing: border-box;
+  background-color: #fc5109;
+}
+
+.toTop{
+	position: fixed;
+	right: 15rpx;
+	bottom: 115rpx;
+	width: 75rpx;
+	height: 75rpx;
+	background-color: #fff;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 0 10rpx #ccc;
+}
+

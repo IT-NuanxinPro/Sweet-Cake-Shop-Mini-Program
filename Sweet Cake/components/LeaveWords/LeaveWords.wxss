@@ -1,0 +1,45 @@
+.comment-item{
+  box-sizing: border-box;
+  width: 100%;
+  height: 110rpx;
+  margin: 6rpx;
+  padding: 10rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.left-comment{
+  width:65%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.head-img{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.comment-word{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 10rpx;
+}
+.anonymous{
+  font-size: 24rpx;
+  color: #999999;
+}
+.comments{
+  font-size: 26rpx;
+  text-indent: 2em;
+}
+.comment-date{
+  width: 35%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-end;
+  align-items: flex-end;
+  font-size: 24rpx;
+}

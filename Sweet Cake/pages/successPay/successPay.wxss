@@ -1,0 +1,18 @@
+.pay-success{
+    background-color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+.success-text{
+    font-size: 40rpx;
+    color: #ff5e60;
+    margin-bottom: 2rem;
+    margin-left: 10rpx;
+}
+
+.success-btn{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25rpx;
+}

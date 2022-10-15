@@ -1,0 +1,13 @@
+{
+  "usingComponents": {
+    "Coupon":"/components/CouPon/CouPon",
+    "van-search": "@vant/weapp/search/index",
+    "van-count-down": "@vant/weapp/count-down/index",
+    "van-icon": "@vant/weapp/icon/index"
+    
+  },
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50,
+  "backgroundColor": "#f6bec8",
+  "backgroundColorTop": "#f6bec8"
+}

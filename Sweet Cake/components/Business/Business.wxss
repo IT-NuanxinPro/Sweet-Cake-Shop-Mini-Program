@@ -1,0 +1,80 @@
+/* 上部分 */
+.order{
+  width: 94%;
+  margin: 18rpx auto;
+  border-radius: 16rpx;
+}
+.business-content {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 94%;
+  height: 360rpx;
+  margin: 18rpx auto;
+  padding: 12rpx;
+  border-radius: 16rpx;
+  background-color: #fff;
+}
+.content-item{
+  flex: 5;
+  margin-top: 12rpx;
+  border-right: 2rpx solid #e3e3e3;
+}
+.img{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12rpx;
+}
+.title {
+  font-weight: 700;
+  font-size: 30rpx;
+}
+.location-img {
+  width: 32rpx;
+  height: 32rpx;
+  vertical-align: bottom;
+}
+.detail{
+  font-size: 28rpx;
+  color: #585858;
+  margin-top: 8rpx;
+}
+
+/* 右侧 */
+.content-phone {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.phone-img {
+  width: 42rpx;
+  height: 42rpx;
+}
+
+/* 下半部分资质 */
+.operate {
+  margin:0 auto;
+  display: inline-block;
+  padding: 8rpx;
+  width: 226rpx;
+  text-align: center;
+  border-radius: 32rpx;
+  border: 1rpx solid #767676;
+  color: #767676;
+  font-size: 28rpx;
+}
+
+.report {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 94%;
+  height: 80rpx;
+  margin: 0 auto;
+  border-radius: 16rpx;
+  background-color: #fff;
+  color: #686868;
+}

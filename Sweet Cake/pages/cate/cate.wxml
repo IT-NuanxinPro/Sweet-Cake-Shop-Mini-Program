@@ -1,0 +1,209 @@
+<view>
+<!-- 分类店面头部-->
+  <view class="head-img">
+    <image src='{{assertUrl +"classifyImg/bg.jpg" }}' mode="aspectFit"></image>
+
+    <view class="box">
+      <view class="top">
+        <view>
+          <view class="top-title">
+            我的小店
+          </view>
+          <view class="top-content">
+            健康食品,食出健康! 我们用心做,您吃的更放心
+          </view>
+        </view>
+        <image
+          class="right-img"
+          src="{{assertUrl+'classifyImg/0.jpg'}}"
+          mode="aspectFit"
+        >
+        </image>
+      </view>
+      <view class="coupon">
+        <view
+          class="discount"
+          wx:for="{{get}}"
+          wx:key="unique"
+          bindtap="getCoupon"
+          data-money="{{item.money}}"
+          data-title="{{item.title}}"
+          style="position:relative;"
+        >
+          <view class="dot-left"></view>
+          <view class="money">{{item.moneyName}}</view>
+          <view class="receive">{{item.title}}</view>
+          <view class="dot-right"></view>
+        </view>
+      </view>
+
+      <view class="notice">
+        <text class="">公告:</text>
+        <text class="">本店满40元起送,配送费￥6.00,所有产品现...</text>
+      </view>
+    </view>
+
+  </view>
+
+<!-- 分类标签内容-->
+  <view class="tab-content">
+    <tabs
+      bindtabsItemChange="changeIndex"
+      tabs="{{tabs}}"
+      commentNum="{{commentNum}}"
+    >
+      <block wx:if="{{activeIndex==0}}">
+        <van-row slot="order" gutter="0">
+          <van-col span="5" class="left-tabs">
+            <scroll-view
+              scroll-y="true"
+              style="height: 974rpx;"
+              bindscrolltoupper="upper"
+              bindscrolltolower="lower"
+              bindscroll="scroll"
+              scroll-into-view="{{toView}}"
+              scroll-top="{{scrollTop}}"
+            >
+              <van-sidebar active-key="{{ activeKey }}" bind:change="onChange">
+                <van-sidebar-item
+                  wx:for="{{cakes}}"
+                  title="{{item.text}}"
+                  badge="{{item.badge?item.badge:''}}"
+                  wx:key="id"
+                />
+              </van-sidebar>
+            </scroll-view>
+          </van-col>
+
+          <van-col span="19">
+            <scroll-view
+              scroll-y="true"
+              style="height: 974rpx;"
+              class="right-goods"
+              bindscrolltoupper="upper"
+              bindscrolltolower="lower"
+              bindscroll="scroll"
+              scroll-into-view="{{toView}}"
+              scroll-top="{{scrollTop}}"
+            >
+              <van-card
+                wx:for="{{changeCakes}}"
+                num="{{item.num}}"
+                tag="{{item.tag_title}}"
+                price="{{item.price}}"
+                origin-price="{{item.oldPrice!==undefined?item.oldPrice:''}}"
+                desc="{{item.content}}"
+                title="{{item.text}}"
+                thumb="{{item.imgUrl}}"
+                wx:key="id"
+              >
+                <view slot="footer" class="card-footer">
+                  <van-rate
+                    value="{{ item.start }}"
+                    size="16"
+                    allow-half
+                    void-icon="star"
+                    void-color="#eee"
+                    readonly
+                    canceltap
+                    catch:change="onChangeStart"
+                    class="footer-start"
+                  />
+                  <block wx:if="{{item.sale}}">
+                    <van-button
+                      size="mini"
+                      round
+                      type="info"
+                      color="#ee0a24"
+                      catchtap="goToDetail"
+                      data-cake="{{item}}"
+                    >秒杀
+                    </van-button>
+                  </block>
+                  <block wx:else>
+                    <van-button
+                      size="mini"
+                      round
+                      type="info"
+                      color="#ee0a24"
+                      catchtap="goToDetail"
+                      data-cake="{{item}}"
+                    >购买
+                    </van-button>
+                  </block>
+                </view>
+              </van-card>
+            </scroll-view>
+
+          </van-col>
+        </van-row>
+        <!-- 旧内容已经删除 -->
+      </block>
+      <block wx:if="{{activeIndex===1}}">
+        <view
+          id="comment"
+          slot="comment"
+          class="comment-content"
+        >
+          <van-sticky
+            container="{{comment}}"
+            offset-top="{{0}}"
+            class="comment-top"
+            z-index
+          >
+            <van-cell-group>
+              <van-field
+                value="{{ message }}"
+                type="textarea"
+                placeholder="请输入留言"
+                autosize
+                border="{{ false }}"
+                use-button-slot
+                maxlength="{{20}}"
+                placeholder-style="font-size:26rpx;"
+                bind:input="changeComment"
+              >
+                <van-button
+                  slot="button"
+                  size="mini"
+                  type="default"
+                  round
+                  color="#feb7c1"
+                  bindtap="sendComment"
+                  data-message="{{message}}"
+                >
+                  发送
+                </van-button>
+              </van-field>
+            </van-cell-group>
+          </van-sticky>
+          <block wx:if="{{sendMessage.length==0?true:false}}">
+            <image
+              class="bgComment"
+              src="{{assertUrl +'classifyImg/10001.png' }}"
+              mode="aspectFit"
+              style="width:100%;"
+            >
+            </image>
+          </block>
+          <block wx:else>
+            <leaveWords comment="{{sendMessage}}" date="{{date}}"></leaveWords>
+          </block>
+        </view>
+      </block>
+      <block wx:if="{{activeIndex===2}}">
+        <view slot="merchant" class="merchant-business">
+          <van-notice-bar
+            left-icon="volume-o"
+            scrollable
+            class="merchant-title"
+            text="配送信息:商家自行配送,10元起送,配送费￥10.00起..."
+          />
+          <Business></Business>
+        </view>
+      </block>
+    </tabs>
+  </view>
+
+</view>
+

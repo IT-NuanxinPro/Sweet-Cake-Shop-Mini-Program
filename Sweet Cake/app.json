@@ -1,0 +1,83 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/cate/cate",
+    "pages/cart/cart",
+    "pages/confirm-order/confirm-order",
+    "pages/user/user",
+    "pages/search/search",
+    "pages/searchRes/searchRes",
+    "pages/details/details",
+    "pages/order/order",
+    "pages/coupon/coupon",
+    "pages/collect/Collect",
+    "pages/addresslist/addresslist",
+    "pages/addaddress/addaddress",
+    "pages/editaddress/editaddress",
+    "pages/redactaddress/redactaddress",
+    "pages/feedback/feedback",
+    "pages/successPay/successPay"
+  ],
+  "tabBar": {
+    "color": "#2c2c54",
+    "selectedColor": "#ff8887",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "static/home_icon/home.png",
+        "selectedIconPath": "static/home_icon/home-select.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/cate/cate",
+        "iconPath": "static/home_icon/cate.png",
+        "selectedIconPath": "static/home_icon/cate-select.png",
+        "text": "商品分类"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "iconPath": "static/home_icon/cart.png",
+        "selectedIconPath": "static/home_icon/cart-select.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "static/home_icon/user.png",
+        "selectedIconPath": "static/home_icon/user-select.png",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f6bec8",
+    "navigationBarTitleText": "甜心蜜语蛋糕坊",
+    "navigationBarTextStyle": "black"
+  },
+  "useExtendedLib": {
+    "weui": true
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-notice-bar": "@vant/weapp/notice-bar/index",
+    "van-card": "@vant/weapp/card/index",
+    "van-sidebar": "@vant/weapp/sidebar/index",
+    "van-sidebar-item": "@vant/weapp/sidebar-item/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-rate": "@vant/weapp/rate/index",
+    "van-row": "@vant/weapp/row/index",
+    "van-col": "@vant/weapp/col/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-sticky": "@vant/weapp/sticky/index",
+    "van-swipe-cell": "@vant/weapp/swipe-cell/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-goods-action": "@vant/weapp/goods-action/index",
+    "van-goods-action-icon": "@vant/weapp/goods-action-icon/index",
+    "van-goods-action-button": "@vant/weapp/goods-action-button/index",
+    "van-steps": "@vant/weapp/steps/index"
+  }
+}
